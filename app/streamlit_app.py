@@ -1,4 +1,6 @@
 import streamlit as st
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src.data_connectors import load_example_data, read_uploaded_csvs
 from src.preprocessing import harmonize_expression, prepare_target
 from src.integration import run_pca, umap_from_latent
